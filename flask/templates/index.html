@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Winbutlose -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>BracketWizard</title>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+<nav class="navbar navbar-light bg-light px-1">
+    <a class="navbar-brand ms-auto" href="#">
+        <!-- <button class="btn btn-sm btn-outline-secondary" type="button" id="button-overlay-toggle"
+            onclick="on()">Legend</button> -->
+
+    </a>
+</nav>
+
+
+<body>
+    <p>I AM BRACKETWIZARD, BRACKETS PLS</p>
+    <!-- {% for album in ratings %}
+    {% endfor %} -->
+
+    <!-- Bracket template from Kristen Neilsen: https://codepen.io/kenielsen/ -->
+
+    <div class='header-text'>
+        <h1>2022 NCAA BracketWizard</h1>
+    </div>
+    <div class='half-circle-container'>
+        <div class='half-circle bottom-circle'>
+            <div></div>
+        </div>
+    </div>
+    <section>
+
+
+        <div class='body-first-child tournament first-four'>
+            <ul class='round seed'>
+                <li class='game-left game-top'>
+                    <span>16</span>
+                    <span></span>
+                </li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>
+                    <span>16</span>
+                    <span></span>
+                </li>
+            </ul>
+            <ul class='round first-four-winner'>
+                <li class='game-left game-top'>
+                    <span></span>
+                </li>
+            </ul>
+            <ul class='round'>
+                <li class='region region-left'>East</li>
+            </ul>
+            <ul class='round seed'>
+                <li class='game-left game-top'>
+                    <span>11</span>
+                    <span></span>
+                </li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>
+                    <span>11</span>
+                    <span></span>
+                </li>
+            </ul>
+            <ul class='round first-four-winner'>
+                <li class='game-left game-top'>
+                    <span></span>
+                </li>
+            </ul>
+            <ul class='round'>
+                <li class='region region-left'>West</li>
+            </ul>
+            <ul class='round'></ul>
+            <ul class='round'>
+                <li class='region region-right'>South</li>
+            </ul>
+            <ul class='round first-four-winner'>
+                <li class='game-right game-top'>
+                    <span></span>
+                </li>
+            </ul>
+            <ul class='round seed'>
+                <li class='game-right game-top'>
+                    <span></span>
+                    <span>16</span>
+                </li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>
+                    <span></span>
+                    <span>16</span>
+                </li>
+            </ul>
+            <ul class='round'>
+                <li class='region region-right'>Midwest</li>
+            </ul>
+            <ul class='round first-four-winner'>
+                <li class='game-right game-top'>
+                    <span></span>
+                </li>
+            </ul>
+            <ul class='round seed'>
+                <li class='game-right game-top'>
+                    <span></span>
+                    <span>11</span>
+                </li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>
+                    <span></span>
+                    <span>11</span>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class='tournament tournament-header'>
+            <ul class='round'>
+                <li>First Round</li>
+                <li>{{tourneyInfo.tourneyInfo.FirstRoundDate}}</li>
+            </ul>
+            <ul class='round'>
+                <li>Second Round</li>
+                <li>{{tourneyInfo.tourneyInfo.SecondRoundDate}}</li>
+            </ul>
+            <ul class='round'>
+                <li>Sweet 16</li>
+                <li>{{tourneyInfo.tourneyInfo.Sweet16Date}}</li>
+            </ul>
+            <ul class='round'>
+                <li>Elite 8</li>
+                <li>{{tourneyInfo.tourneyInfo.Elite8Date}}</li>
+            </ul>
+            <ul class='round'>
+                <li>Final 4</li>
+                <li>{{tourneyInfo.tourneyInfo.Final4Date}}</li>
+            </ul>
+            <ul class='round'>
+            </ul>
+            <ul class='round'>
+                <li>National Championship</li>
+                <li>{{tourneyInfo.tourneyInfo.NationalChampionshipDate}}</li>
+            </ul>
+            <ul class='round'>
+            </ul>
+            <ul class='round'>
+                <li>Final 4</li>
+                <li>{{tourneyInfo.tourneyInfo.Final4Date}}</li>
+            </ul>
+            <ul class='round'>
+                <li>Elite 8</li>
+                <li>{{tourneyInfo.tourneyInfo.Elite8Date}}</li>
+            </ul>
+            <ul class='round'>
+                <li>Sweet 16</li>
+                <li>{{tourneyInfo.tourneyInfo.Sweet16Date}}</li>
+            </ul>
+            <ul class='round'>
+                <li>Second Round</li>
+                <li>{{tourneyInfo.tourneyInfo.SecondRoundDate}}</li>
+            </ul>
+            <ul class='round'>
+                <li>First Round</li>
+                <li>{{tourneyInfo.tourneyInfo.FirstRoundDate}}</li>
+            </ul>
+        </div>
+
+
+        <!-- First Round West -->
+        <div class='tournament'>
+            <ul class='round seed'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>1</span>
+                    <span>{{tourneyInfo.seeds.west[1][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>16</span>
+                    <span>{{tourneyInfo.seeds.west[16][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>8</span>
+                    <span>{{tourneyInfo.seeds.west[8][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>9</span>
+                    <span>{{tourneyInfo.seeds.west[9][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>5</span>
+                    <span>{{tourneyInfo.seeds.west[5][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>12</span>
+                    <span>{{tourneyInfo.seeds.west[12][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>4</span>
+                    <span>{{tourneyInfo.seeds.west[4][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>13</span>
+                    <span>{{tourneyInfo.seeds.west[13][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>6</span>
+                    <span>{{tourneyInfo.seeds.west[6][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>11</span>
+                    <span>{{tourneyInfo.seeds.west[11][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>3</span>
+                    <span>{{tourneyInfo.seeds.west[3][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>14</span>
+                    <span>{{tourneyInfo.seeds.west[14][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>7</span>
+                    <span>{{tourneyInfo.seeds.west[7][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>10</span>
+                    <span>{{tourneyInfo.seeds.west[10][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>2</span>
+                    <span>{{tourneyInfo.seeds.west[2][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>15</span>
+                    <span>{{tourneyInfo.seeds.west[15][1]}}</span>
+                </li>
+
+                <!-- First Round East -->
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>1</span>
+                    <span>{{tourneyInfo.seeds.east[1][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>16</span>
+                    <span>{{tourneyInfo.seeds.east[16][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>8</span>
+                    <span>{{tourneyInfo.seeds.east[8][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>9</span>
+                    <span>{{tourneyInfo.seeds.east[9][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>5</span>
+                    <span>{{tourneyInfo.seeds.east[5][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>12</span>
+                    <span>{{tourneyInfo.seeds.east[12][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>4</span>
+                    <span>{{tourneyInfo.seeds.east[4][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>13</span>
+                    <span>{{tourneyInfo.seeds.east[13][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>6</span>
+                    <span>{{tourneyInfo.seeds.east[6][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>11</span>
+                    <span>{{tourneyInfo.seeds.east[11][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>3</span>
+                    <span>{{tourneyInfo.seeds.east[3][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>14</span>
+                    <span>{{tourneyInfo.seeds.east[14][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>7</span>
+                    <span>{{tourneyInfo.seeds.east[7][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>10</span>
+                    <span>{{tourneyInfo.seeds.east[10][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>
+                    <span>2</span>
+                    <span>{{tourneyInfo.seeds.east[2][1]}}</span>
+                </li>
+                <li class='game-left game-bottom'>
+                    <span>15</span>
+                    <span>{{tourneyInfo.seeds.east[15][1]}}</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Second Round West -->
+            <ul class='round round-1'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{R2W[1][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{R2W[8][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{R2W[5][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{R2W[4][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{R2W[6][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{R2W[3][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{R2W[7][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{R2W[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+
+                <!-- Second Round East -->
+                <li class='game-left game-top'>{{R2E[1][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{R2E[8][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{R2E[5][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{R2E[4][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{R2E[6][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{R2E[3][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{R2E[7][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{R2E[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Sweet Sixteen West -->
+            <ul class='round round-2'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{S16W[1][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{S16W[4][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{S16W[3][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{S16W[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+
+            <!-- Sweet Sixteen East -->
+            <li class='game-left game-top'>{{S16E[1][1]}}</li>
+            <li class='game-left spacer'>&nbsp;</li>
+            <li class='game-left game-bottom'>{{S16E[4][1]}}</li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-left game-top'>{{S16E[3][1]}}</li>
+            <li class='game-left spacer'>&nbsp;</li>
+            <li class='game-left game-bottom'>{{S16E[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Elite 8 West -->
+            <ul class='round round-3'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{E8[1][1]}}</li>
+                <li class='game-left spacer region region-right'>West</li>
+                <li class='game-left game-bottom'>{{E8[8][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+
+            <!-- Elite 8 East -->
+                <li class='game-left game-top'>{{E8[2][1]}}</li>
+                <li class='game-left spacer region region-right'>East</li>
+                <li class='game-left game-bottom'>{{E8[7][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Final Four W/E -->
+            <ul class='round round-4'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{FF[1][1]}}</li>
+                <li class='game-left spacer'>&nbsp;</li>
+                <li class='game-left game-bottom'>{{FF[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Final W/E -->
+            <ul class='round semi-final'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-left game-top'>{{Chip[1][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Winner -->
+            <ul class='round finals'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game final'>{{Champion[1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Final M/S -->
+            <ul class='round semi-final'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{Chip[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Final Four M/S -->
+            <ul class='round round-4'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{FF[4][1]}}</li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>{{FF[3][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Elite 8 South -->
+            <ul class='round round-3'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{E8[4][1]}}</li>
+                <li class='game-right spacer region region-left'>South</li>
+                <li class='game-right game-bottom'>{{E8[5][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+
+            <!-- Elite 8 Midwest -->   
+                <li class='game-right game-top'>{{E8[3][1]}}</li>
+                <li class='game-right spacer region region-left'>Midwest</li>
+                <li class='game-right game-bottom'>{{E8[6][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- Sweet Sixteen South -->
+            <ul class='round round-2'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{S16S[1][1]}}</li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>{{S16S[4][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{S16S[3][1]}}</li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>{{S16S[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+
+            <!-- Sweet Sixteen Midwest -->
+            <li class='game-right game-top'>{{S16MW[1][1]}}</li>
+            <li class='game-right spacer'>&nbsp;</li>
+            <li class='game-right game-bottom'>{{S16MW[4][1]}}</li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>{{S16MW[3][1]}}</li>
+            <li class='game-right spacer'>&nbsp;</li>
+            <li class='game-right game-bottom'>{{S16MW[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+            
+            <!-- Second Round South -->
+            <ul class='round round-1'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{R2S[1][1]}}</li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>{{R2S[8][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{R2S[5][1]}}</li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>{{R2S[4][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{R2S[6][1]}}</li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>{{R2S[3][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>{{R2S[7][1]}}</li>
+                <li class='game-right spacer'>&nbsp;</li>
+                <li class='game-right game-bottom'>{{R2S[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+
+            <!-- Second Round Midwest -->    
+            <li class='game-right game-top'>{{R2MW[1][1]}}</li>
+            <li class='game-right spacer'>&nbsp;</li>
+            <li class='game-right game-bottom'>{{R2MW[8][1]}}</li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>{{R2MW[5][1]}}</li>
+            <li class='game-right spacer'>&nbsp;</li>
+            <li class='game-right game-bottom'>{{R2MW[4][1]}}</li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>{{R2MW[6][1]}}</li>
+            <li class='game-right spacer'>&nbsp;</li>
+            <li class='game-right game-bottom'>{{R2MW[3][1]}}</li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>{{R2MW[7][1]}}</li>
+            <li class='game-right spacer'>&nbsp;</li>
+            <li class='game-right game-bottom'>{{R2MW[2][1]}}</li>
+                <li class='spacer'>&nbsp;</li>
+            </ul>
+
+            <!-- First Round South -->
+            <ul class='round seed'>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>
+                    <span>{{tourneyInfo.seeds.south[1][1]}}</span>
+                    <span>1</span>
+                </li>
+                <li class='game-right game-bottom'>
+                    <span>{{tourneyInfo.seeds.south[16][1]}}</span>
+                    <span>16</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>
+                    <span>{{tourneyInfo.seeds.south[8][1]}}</span>
+                    <span>8</span>
+                </li>
+                <li class='game-right game-bottom'>
+                    <span>{{tourneyInfo.seeds.south[9][1]}}</span>
+                    <span>9</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>
+                    <span>{{tourneyInfo.seeds.south[5][1]}}</span>
+                    <span>5</span>
+                </li>
+                <li class='game-right game-bottom'>
+                    <span>{{tourneyInfo.seeds.south[12][1]}}</span>
+                    <span>12</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>
+                    <span>{{tourneyInfo.seeds.south[4][1]}}</span>
+                    <span>4</span>
+                </li>
+                <li class='game-right game-bottom'>
+                    <span>{{tourneyInfo.seeds.south[13][1]}}</span>
+                    <span>13</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>
+                    <span>{{tourneyInfo.seeds.south[6][1]}}</span>
+                    <span>6</span>
+                </li>
+                <li class='game-right game-bottom'>
+                    <span>{{tourneyInfo.seeds.south[11][1]}}</span>
+                    <span>11</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>
+                    <span>{{tourneyInfo.seeds.south[3][1]}}</span>
+                    <span>3</span>
+                </li>
+                <li class='game-right game-bottom'>
+                    <span>{{tourneyInfo.seeds.south[14][1]}}</span>
+                    <span>14</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>
+                    <span>{{tourneyInfo.seeds.south[7][1]}}</span>
+                    <span>7</span>
+                </li>
+                <li class='game-right game-bottom'>
+                    <span>{{tourneyInfo.seeds.south[10][1]}}</span>
+                    <span>10</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+                <li class='game-right game-top'>
+                    <span>{{tourneyInfo.seeds.south[2][1]}}</span>
+                    <span>2</span>
+                </li>
+                <li class='game-right game-bottom'>
+                    <span>{{tourneyInfo.seeds.south[15][1]}}</span>
+                    <span>15</span>
+                </li>
+                <li class='spacer'>&nbsp;</li>
+
+            <!-- First Round midwest -->
+            <li class='game-right game-top'>
+                <span>{{tourneyInfo.seeds.midwest[1][1]}}</span>
+                <span>1</span>
+            </li>
+            <li class='game-right game-bottom'>
+                <span>{{tourneyInfo.seeds.midwest[16][1]}}</span>
+                <span>16</span>
+            </li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>
+                <span>{{tourneyInfo.seeds.midwest[8][1]}}</span>
+                <span>8</span>
+            </li>
+            <li class='game-right game-bottom'>
+                <span>{{tourneyInfo.seeds.midwest[9][1]}}</span>
+                <span>9</span>
+            </li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>
+                <span>{{tourneyInfo.seeds.midwest[5][1]}}</span>
+                <span>5</span>
+            </li>
+            <li class='game-right game-bottom'>
+                <span>{{tourneyInfo.seeds.midwest[12][1]}}</span>
+                <span>12</span>
+            </li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>
+                <span>{{tourneyInfo.seeds.midwest[4][1]}}</span>
+                <span>4</span>
+            </li>
+            <li class='game-right game-bottom'>
+                <span>{{tourneyInfo.seeds.midwest[13][1]}}</span>
+                <span>13</span>
+            </li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>
+                <span>{{tourneyInfo.seeds.midwest[6][1]}}</span>
+                <span>6</span>
+            </li>
+            <li class='game-right game-bottom'>
+                <span>{{tourneyInfo.seeds.midwest[11][1]}}</span>
+                <span>11</span>
+            </li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>
+                <span>{{tourneyInfo.seeds.midwest[3][1]}}</span>
+                <span>3</span>
+            </li>
+            <li class='game-right game-bottom'>
+                <span>{{tourneyInfo.seeds.midwest[14][1]}}</span>
+                <span>14</span>
+            </li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>
+                <span>{{tourneyInfo.seeds.midwest[7][1]}}</span>
+                <span>7</span>
+            </li>
+            <li class='game-right game-bottom'>
+                <span>{{tourneyInfo.seeds.midwest[10][1]}}</span>
+                <span>10</span>
+            </li>
+            <li class='spacer'>&nbsp;</li>
+            <li class='game-right game-top'>
+                <span>{{tourneyInfo.seeds.midwest[2][1]}}</span>
+                <span>2</span>
+            </li>
+            <li class='game-right game-bottom'>
+                <span>{{tourneyInfo.seeds.midwest[15][1]}}</span>
+                <span>15</span>
+            </li>
+            <li class='spacer'>&nbsp;</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+cd /d G:\mongodb\mongodb-win32-x86_64-windows-5.0.5\bin
+in one window run   mongod.exe --dbpath G:\mongodb\fivewordreviewsdb   for the server
+in another run    mongo    for the client
+
+
+show dbs
+use fivewordreviews
+db
+show collections
+ db.ratings.find()
+
+use the mongoconnect script to add a new album json (template from template.json) to the list
+
+
+https://musicbrainz.org/doc/MusicBrainz_API
+https://musicbrainz.org/doc/Cover_Art_Archive/API
